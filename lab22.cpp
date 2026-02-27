@@ -1,36 +1,5 @@
 #include<iostream>
 #include<cmath>
-using namespace std;
-
-class ComplexNumber{				
-	public:
-		double real;
-		double imag;
-		ComplexNumber(double,double);
-		ComplexNumber operator+(const ComplexNumber &);
-		ComplexNumber operator-(const ComplexNumber &);
-		ComplexNumber operator*(const ComplexNumber &);
-		ComplexNumber operator/(const ComplexNumber &);
-		bool operator==(const ComplexNumber &);
-		double abs();
-		double angle();
-};
-
-ComplexNumber::ComplexNumber(double x = 0,double y = 0){
-	real = x; imag = y;
-}
-
-ComplexNumber ComplexNumber::operator+(const ComplexNumber &c){
-	return ComplexNumber(real+c.real,imag+c.imag);
-}
-
-ComplexNumber ComplexNumber::operator-(const ComplexNumber &c){
-	return ComplexNumber(real-c.real,imag-c.imag);
-}
-
-//Write your code here
-#include<iostream>
-#include<cmath>
 #include<iomanip>
 
 using namespace std;
@@ -95,9 +64,3 @@ ostream& operator<<(ostream &os, const ComplexNumber &c){
 	if(c.imag > 0) return os << c.real << "+" << c.imag << "i";
 	return os << c.real << c.imag << "i";
 }
-
-
-
-
-
-
